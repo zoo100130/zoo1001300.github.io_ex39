@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask Exercises{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="{{ url_for('home') }}">Flask Exercises</a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="{{ url_for('hello') }}">Hello</a>
+            <a href="{{ url_for('show_user_profile', username='John') }}">URL</a>
+            <a href="{{ url_for('apple') }}">HTML</a>
+            <a href="{{ url_for('variables') }}">Variables</a>
+            <a href="{{ url_for('double_form') }}">Double</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

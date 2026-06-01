@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Show Variables{% endblock %}
+
+{% block content %}
+<section class="panel">
+    <p class="eyebrow">Exercise 42 / 47</p>
+    <h1>Show Variables</h1>
+    <dl class="info-list">
+        <div>
+            <dt>name</dt>
+            <dd>{{ person.name }}</dd>
+        </div>
+        <div>
+            <dt>age</dt>
+            <dd>{{ person.age }}</dd>
+        </div>
+        <div>
+            <dt>city</dt>
+            <dd>{{ person.city }}</dd>
+        </div>
+    </dl>
+</section>
+{% endblock %}

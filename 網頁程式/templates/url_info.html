@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}URL Info{% endblock %}
+
+{% block content %}
+<section class="panel">
+    <p class="eyebrow">Exercise 40 / 45</p>
+    <h1>{{ title }}</h1>
+    <dl class="info-list">
+        <div>
+            <dt>Route</dt>
+            <dd>{{ route }}</dd>
+        </div>
+        <div>
+            <dt>{{ label }}</dt>
+            <dd>{{ value }}</dd>
+        </div>
+    </dl>
+    <div class="sample-links">
+        <a href="{{ url_for('show_user_profile', username='Alice') }}">/user/Alice</a>
+        <a href="{{ url_for('show_post', post_id=42) }}">/post/42</a>
+        <a href="{{ url_for('show_subpath', subpath='flask/routes/demo') }}">/path/flask/routes/demo</a>
+    </div>
+</section>
+{% endblock %}
