@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Flask Exercises 39-48{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">Exercises 39-48</p>
+        <h1>Flask Course Project</h1>
+        <p class="lead">A complete Flask practice app with routes, templates, variables, form handling, and Azure-ready project files.</p>
+    </div>
+    <img class="hero-image" src="{{ url_for('static', filename='img/flask-lab.png') }}" alt="Flask project preview">
+</section>
+
+<section class="exercise-grid" aria-label="Exercise list">
+    {% for exercise in exercises %}
+    <a class="exercise-card" href="{{ exercise.url }}">
+        <span class="exercise-number">Exercise {{ exercise.number }}</span>
+        <strong>{{ exercise.title }}</strong>
+        <span>{{ exercise.summary }}</span>
+    </a>
+    {% endfor %}
+</section>
+{% endblock %}

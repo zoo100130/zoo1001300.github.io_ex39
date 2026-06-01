@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Banana{% endblock %}
+
+{% block content %}
+<section class="fruit-page fruit-banana">
+    <p class="eyebrow">Exercise 41 / 46</p>
+    <h1>{{ fruit.title }}</h1>
+    <p class="lead">{{ fruit.description }}</p>
+    <dl class="info-list compact">
+        <div>
+            <dt>Color</dt>
+            <dd>{{ fruit.color }}</dd>
+        </div>
+        <div>
+            <dt>Template</dt>
+            <dd>banana.html</dd>
+        </div>
+    </dl>
+</section>
+{% endblock %}

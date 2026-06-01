@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Template - Page{% endblock %}
+
+{% block content %}
+<section class="panel">
+    <p class="eyebrow">Template - Page</p>
+    <h1>{{ text }}</h1>
+
+    {% if appInfo != undefined %}
+    <dl class="info-list">
+        <div>
+            <dt>id</dt>
+            <dd>{{ appInfo.id }}</dd>
+        </div>
+        <div>
+            <dt>name</dt>
+            <dd>{{ appInfo.name }}</dd>
+        </div>
+        <div>
+            <dt>version</dt>
+            <dd>{{ appInfo.version }}</dd>
+        </div>
+        <div>
+            <dt>author</dt>
+            <dd>{{ appInfo.author }}</dd>
+        </div>
+        <div>
+            <dt>remark</dt>
+            <dd>{{ appInfo.remark }}</dd>
+        </div>
+    </dl>
+    {% endif %}
+</section>
+{% endblock %}

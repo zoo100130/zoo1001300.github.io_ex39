@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Double Number{% endblock %}
+
+{% block content %}
+<section class="panel form-panel">
+    <p class="eyebrow">Exercise 48</p>
+    <h1>Double Number</h1>
+    <form class="number-form" action="{{ url_for('predict') }}" method="post">
+        <label for="x">Input a number</label>
+        <div class="form-row">
+            <input id="x" type="number" name="x" value="{{ x if x is not none else '' }}" required>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    {% if result is not none %}
+    <div class="result-box">
+        <span>Double Result</span>
+        <strong>{{ result }}</strong>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}
